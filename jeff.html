@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style2.css" />
+    <title>$Jeff</title>
+  </head>
+  <body>
+    <div class="images">
+      <img src="/assets/images/JEFF2.png" class="active" />
+      <img src="/assets/images/JEFF3.png" />
+      <img src="/assets/images/JEFF4.png" />
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+      integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/rwdImageMaps.js"></script>
+
+    <script>
+      const images = document.querySelectorAll("img");
+      let index = 0;
+
+      setInterval(() => {
+        images.forEach((img) => (img.className = ""));
+        images[index].className = "active";
+        index += 1;
+        if (index == 3) index = 0;
+      }, 400);
+
+      setTimeout(() => {
+        window.location.href = "/socials.html";
+      }, 6000);
+    </script>
+  </body>
+</html>

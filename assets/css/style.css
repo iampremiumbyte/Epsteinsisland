@@ -17,10 +17,33 @@ img {
 }
 
 .box {
-    background-color: aliceblue;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.169);
     animation-name: blink;
-    animation-duration: .8s;
+    animation-duration: .3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
     animation-direction: alternate;
+    z-index: 10;
+    opacity: .7;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@keyframes blink {
+    from {
+        opacity: .7;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    img {
+        height: 100vh;
+    }
 }
